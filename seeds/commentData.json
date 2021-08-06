@@ -1,0 +1,22 @@
+[
+    {
+      "comment_text": "comment test1",
+      "user_id": 1,
+      "blogPosts_id":4
+    },
+    {
+      "comment_text": "comment test2",
+      "user_id": 2,
+      "blogPosts_id":3
+    },
+    {
+      "comment_text": "comment test3",
+      "user_id": 3,
+      "blogPosts_id": 2
+    },
+    {
+      "comment_text": "comment test4",
+      "user_id": 4,
+      "blogPosts_id": 1
+    }
+  ]

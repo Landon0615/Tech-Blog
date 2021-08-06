@@ -1,0 +1,18 @@
+<nav class="navbar navbar-dark bg-dark">
+        <form class="container-fluid justify-content-end">
+            <button class="btn btn-outline-success me-2 loginBtn" type="button">Login</button>
+            <button class="btn btn-outline-primary me-2 registerBtn" type="button">Register</button>
+             <button class="btn btn-outline-primary me-2 dashboardBtn" type="button">Dashboard</button>
+        </form>
+    </nav>
+    <body>
+<ol class="post-list">
+  {{#each blogPost as |blogPost|}}
+  <li>
+    {{> blogPost-info blogPost}}
+  </li>
+  {{/each}}
+</ol>
+</body>
+
+<script src="/js/homepage.js"></script>
