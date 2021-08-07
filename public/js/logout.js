@@ -12,8 +12,3 @@ const logout = async () => {
 };
 
 document.querySelector('#logout').addEventListener('click', logout);
-
-loginBtn.addEventListener('click', function (event) {
-    event.preventDefault();
-    document.location.replace('/login');
-  });

@@ -3,10 +3,11 @@
     <div class="title">
         <h2>{{title}}</h2> 
         <h4>{{user.username}}</h4>
-        <p>{{blogPosts_text}}</p>
+        <span>{{format_date created_at}}</span>
+        <p>{{blogPost_text}}</p>
     </div>
     
     <div class="meta">
-        <a href="/post/{{id}}">{{comments.length}}</a>
+        <a href="/post/{{id}}">{{comments.length}}{{format_plural "comment" comments.length}}</a>
     </div>
 </article>

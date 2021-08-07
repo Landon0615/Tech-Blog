@@ -1,10 +1,39 @@
 
 <nav class="navbar navbar-dark bg-dark">
     <form class="container-fluid justify-content-end">
+            <button class="btn btn-outline-success me-2 homeBtn" type="button">Home</button>
         <button class="btn btn-outline-success me-2" id="logout" type="button">Logout</button>
     </form>
 </nav>
-
-<p>Dashboard</p>
-
-<script src="/js/logout.js"></script>
+      <h1 class="text-center about">
+    Dashboard
+  </h1>
+<section>
+    <h2>Create New Post</h2>
+    
+    <form class="new-post-form">
+        <div>
+            <label for="post-title">Title</label>
+            <input type="text" id="post-title" name="post-title"/>
+        </div>
+        <div>
+            <label for="post-text">Text</label>
+            <textarea id="post-text" name="post-text"></textarea>
+        </div>
+        <button type="submit" class="btn">Create</button>
+    </form>
+</section>
+{{#if blogPost.length}}
+<section>
+    <h2>Your Posts</h2>
+    <ol>
+        {{#each blogPost as |blogPost|}}
+        <li>
+            {{> blogPost-info blogPost}}
+            <a href="/dashboard/edit/{{blogPosts.id}}" class="edit-link">Edit Post</a>
+        </li>
+        {{/each}}
+    </ol>
+</section>
+{{/if}}
+<script src="/js/add-post.js"></script>
