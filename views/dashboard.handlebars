@@ -23,11 +23,10 @@
         <button type="submit" class="btn">Create</button>
     </form>
 </section>
-{{#if blogPost.length}}
 <section>
     <h2>Your Posts</h2>
     <ol>
-        {{#each blogPost as |blogPost|}}
+        {{#each blogPosts as |blogPost|}}
         <li>
             {{> blogPost-info blogPost}}
             <a href="/dashboard/edit/{{blogPosts.id}}" class="edit-link">Edit Post</a>
@@ -35,5 +34,7 @@
         {{/each}}
     </ol>
 </section>
-{{/if}}
+
+
 <script src="/js/add-post.js"></script>
+<script src="/js/logout.js"></script>

@@ -76,17 +76,17 @@ router.get('/post/:id', (req, res) => {
       }
     ]
   })
-    .then(dbPostData => {
-      if (!dbPostData) {
+    .then(postData => {
+      if (!postData) {
         res.status(404).json({ message: 'No post found with this id' });
         return;
       }
       // serialize the data
-      const post = dbPostData.get({ plain: true })
+      const blogPost = postData.get({ plain: true })
 
       // pass data to template
       res.render('single-post', {
-        post,
+        blogPost,
         loggedIn: req.session.loggedIn,
         username: req.session.username
       });

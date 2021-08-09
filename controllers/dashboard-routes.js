@@ -31,8 +31,8 @@ router.get('/', withAuth, (req, res) => {
     ]
   })
     .then(blogPostsData => {
-      const blogPost = blogPostsData.map(blogPosts => blogPosts.get({ plain: true }));
-      res.render('dashboard', { blogPost, loggedIn: true, username: req.session.username });
+      const blogposts = blogPostsData.map(blogPost => blogPost.get({ plain: true }));
+      res.render('dashboard', { blogposts, loggedIn: true, username: req.session.username });
     })
     .catch(err => {
       console.log(err);
