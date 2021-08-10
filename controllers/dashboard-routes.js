@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 const { blogPosts, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
-// get all blogPostss for dashboard
+
 router.get('/', withAuth, (req, res) => {
   blogPosts.findAll({
     where: {
