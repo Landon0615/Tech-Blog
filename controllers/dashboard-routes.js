@@ -30,9 +30,9 @@ router.get('/', withAuth, (req, res) => {
       }
     ]
   })
-    .then(blogPostsData => {
-      const blogposts = blogPostsData.map(blogPost => blogPost.get({ plain: true }));
-      res.render('dashboard', { blogposts, loggedIn: true, username: req.session.username });
+    .then(blogPostData => {
+      const blogPost = blogPostData.map(blogPosts => blogPosts.get({ plain: true }));
+      res.render('dashboard', { blogPost, loggedIn: true, username: req.session.username });
     })
     .catch(err => {
       console.log(err);
@@ -63,9 +63,9 @@ router.get('/edit/:id', withAuth, (req, res) => {
       }
     ]
   })
-    .then(blogPostsData => {
-      if (blogPostsData) {
-        const blogPost = blogPostsData.get({ plain: true });
+    .then(blogPostData => {
+      if (blogPostData) {
+        const blogPost = blogPostData.get({ plain: true });
         
         res.render('edit-post', {
           blogPost,
@@ -80,5 +80,6 @@ router.get('/edit/:id', withAuth, (req, res) => {
       res.status(500).json(err);
     });
 });
+
 
 module.exports = router;

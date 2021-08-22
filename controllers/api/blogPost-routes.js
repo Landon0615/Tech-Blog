@@ -26,7 +26,7 @@ router.get('/', withAuth, (req, res) => {
       }
     ]
   })
-    .then(blogPostsData => res.json(blogPostsData))
+    .then(blogPostData => res.json(blogPostData))
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
@@ -60,12 +60,12 @@ router.get('/:id', withAuth, (req, res) => {
       }
     ]
   })
-    .then(blogPostsData => {
-      if (!blogPostsData) {
+    .then(blogPostData => {
+      if (!blogPostData) {
         res.status(404).json({ message: 'No blogPosts found with this id' });
         return;
       }
-      res.json(blogPostsData);
+      res.json(blogPostData);
     })
     .catch(err => {
       console.log(err);
@@ -79,7 +79,7 @@ router.post('/', withAuth, (req, res) => {
     blogPosts_text: req.body.blogPosts_text,
     user_id: req.session.user_id
   })
-    .then(blogPostsData => res.json(blogPostsData))
+    .then(blogPostData => res.json(blogPostData))
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
@@ -99,12 +99,12 @@ router.put('/:id', withAuth, (req, res) => {
       }
     }
   )
-    .then(blogPostsData => {
-      if (!blogPostsData) {
+    .then(blogPostData => {
+      if (!blogPostData) {
         res.status(404).json({ message: 'No blogPosts found with this id' });
         return;
       }
-      res.json(blogPostsData);
+      res.json(blogPostData);
     })
     .catch(err => {
       console.log(err);
@@ -119,12 +119,12 @@ router.delete('/:id', withAuth, (req, res) => {
       id: req.params.id
     }
   })
-    .then(blogPostsData => {
-      if (!blogPostsData) {
+    .then(blogPostData => {
+      if (!blogPostData) {
         res.status(404).json({ message: 'No blogPosts found with this id' });
         return;
       }
-      res.json(blogPostsData);
+      res.json(blogPostData);
     })
     .catch(err => {
       console.log(err);

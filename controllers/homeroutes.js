@@ -50,7 +50,7 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
-router.get('/post/:id', (req, res) => {
+router.get('/blogPost/:id', (req, res) => {
   blogPosts.findOne({
     where: {
       id: req.params.id
@@ -107,8 +107,6 @@ router.get('/register', (req, res) => {
     res.render('register');
 });
 
-router.get('/dashboard', withAuth, async (req, res) => {
-        res.render('dashboard')
-});
+
 
 module.exports = router;

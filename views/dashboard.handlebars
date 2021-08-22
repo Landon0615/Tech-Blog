@@ -26,14 +26,15 @@
 <section>
     <h2>Your Posts</h2>
     <ol>
-        {{#each blogPosts as |blogPost|}}
+        {{#each blogPost as |blogPost|}}
         <li>
             {{> blogPost-info blogPost}}
-            <a href="/dashboard/edit/{{blogPosts.id}}" class="edit-link">Edit Post</a>
+            <a href="/dashboard/edit/{{blogPost.id}}" class="edit-link">Edit Post</a>
         </li>
         {{/each}}
     </ol>
 </section>
+
 
 
 <script src="/js/add-post.js"></script>

@@ -67,11 +67,14 @@
     background-color: #225ca3;
     border: 0;
     padding: 1%;
-    color: white;
+    color: rgb(255, 255, 255);
     font-weight: bold;
     transition: background-color .1s;
     cursor: pointer;
     border-radius: 5px;
+  }
+  .text{
+    color:#a32222;
   }
   
   button:hover {
@@ -86,7 +89,7 @@
   textarea, input {
     padding: .5%;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid rgb(0, 16, 243);
   }
   
   textarea:focus, input:focus {
@@ -189,6 +192,7 @@
   }
   
   .comment {
+    background-color: #225ca3;
     padding: 1%;
     margin-bottom: 1%;
   }
@@ -196,9 +200,14 @@
   .comment:nth-child(odd) {
     background-color: #fff5eb;
   }
+  #home{
+    color: #f10000;
+    font-size: 80%;
+  }
   
   .comment .meta {
-    font-size: 90%;
+    color: #000000;
+    font-size: 120%;
     margin-bottom: .5%;
     opacity: .6;
   }
