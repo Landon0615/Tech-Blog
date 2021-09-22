@@ -1,5 +1,6 @@
 # Tech-blog ![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)
 This an application used to log about tech. You are able to create, edit and delete your post. You can comment on others post. 
+"https://landon-tech-blog.herokuapp.com/"
 ## Table of Contents:
 * [Installation](#installation)
 * [Usage](#usage)
